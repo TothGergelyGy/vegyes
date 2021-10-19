@@ -32,8 +32,8 @@ public:
     
     NetworkInterface iface_eth0 = NetworkInterface("eth0"); //"eth0" rpi interface
     NetworkInterface iface_eth1 = NetworkInterface("eth1"); //"eth1" rpi interface
-    NetworkInterface::Info info_eth0 = info_eth0.addresses(); //rpi interface cimeit kiolvassa
-    NetworkInterface::Info info_eth1 = info_eth1.addresses(); //rpi interface cimeit kiolvassa
+    //NetworkInterface::Info info_eth0 = info_eth0.addresses(); //rpi interface cimeit kiolvassa
+    //NetworkInterface::Info info_eth1 = info_eth1.addresses(); //rpi interface cimeit kiolvassa
     PacketSender sender;
     //info_eth0.hw_addr
     //EthernetII eth2drive = 
