@@ -49,13 +49,13 @@ private:
         
         //ha tartalmaz IP-t,  irjuk at es kuldjuk ki a masik oldalon
         if ( (eth2->find_pdu<IP>())!=0 && 
-             (eth2->find_pdu<IP>().dst_addr() == "192.0.1.2" || (eth2->find_pdu<IP>().dst_addr() == "192.168.222.80" && eth2->find_pdu<IP>().src_addr() == "192.0.0.1"))
+             (eth2->find_pdu<IP>()->dst_addr() == "192.0.1.2" || (eth2->find_pdu<IP>()->dst_addr() == "192.168.222.80" && eth2->find_pdu<IP>()->src_addr() == "192.0.0.1"))
             ) 
         {  
             eth2->src_addr("00:24:32:17:5F:55"); 
             eth2->dst_addr("00:1F:29:60:0D:14"); 
-            eth2->find_pdu<IP>().src_addr("192.168.222.81"); 
-            eth2->find_pdu<IP>().dst_addr("192.0.1.2");
+            eth2->find_pdu<IP>()->src_addr("192.168.222.81"); 
+            eth2->find_pdu<IP>()->dst_addr("192.0.1.2");
             sender.send(*eth2, iface_eth1);                     //az eth1 interfacere kuldjuk
             delete eth2;
             return true;
