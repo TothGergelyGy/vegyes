@@ -62,43 +62,43 @@ private:
         //szimulacioban levo 192.0.2.2
         //szimulacioban levo 192.0.1.3
         std::cout << "RPI 192.168.221.81 forrás küldése";
-        for (int i = 0; i < 15; i++) 
+        for (int i = 0; i < 3; i++) 
         {
             BasicPacket("192.168.221.81");
         }
         std::cin.get();
         std::cout << "random 192.0.3.4 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("192.0.3.4");
         }
         std::cin.get();
         std::cout << "random 179.243.24.17 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("179.243.24.17");
         }
         std::cin.get();
         std::cout << "exata eth3 192.168.221.3 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("192.168.221.3");
         }
         std::cin.get();
         std::cout << "exata eth2 192.168.222.2 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("192.168.222.2");
         }
         std::cin.get();
         std::cout << "szimulacioban levo 192.0.2.2 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("192.0.2.2");
         }
         std::cin.get();
         std::cout << "szimulacioban levo 192.0.1.3 forrás küldése";
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 3; i++)
         {
             BasicPacket("192.0.1.3");
         }
