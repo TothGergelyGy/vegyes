@@ -45,8 +45,9 @@ private:
     {
         EthernetII eth2("00:1F:29:60:0D:14", "00:24:32:17:5F:55");
         eth2 /= IP("192.0.1.2", source);
-        eth2 /= UDP(13, 15);
-        eth2 /= RawPDU("Im a payload");
+        eth2 /= ICMP();
+        //eth2 /= UDP(13, 15);
+        //eth2 /= RawPDU("Im a payload");
         sender.send(eth2, iface_eth1);
     }
     bool callback(PDU& pdu) {
