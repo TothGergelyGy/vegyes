@@ -8,15 +8,16 @@
 #include <tins/tins.h>
 #include <iostream>
 #include <functional>
+#include <string>
 using std::bind;
 using namespace Tins;
-
+using std::string;
 
 /*
 RPI eth0    192.168.222.80              ->  Server eth2     192.168.222.2
             B8:27:EB:46:87:2A                               00:1F:29:60:0D:15
 
-RPI eth1    192.168.222.81              ->  Server eth3     192.168.222.3
+RPI eth1    192.168.221.81              ->  Server eth3     192.168.221.3
             00:24:32:17:5F:55                               00:1F:29:60:0D:14
 
 
@@ -41,27 +42,69 @@ public:
         );
     }
 private:
+    void BasicPacket(string source) 
+    {
+        EthernetII eth2("00:1F:29:60:0D:14", "00:24:32:17:5F:55");
+        eth2 /= IP("192.0.1.2", source);
+        eth2 /= UDP(13, 15);
+        eth2 /= RawPDU("Im a payload");
+        sender.send(eth2, iface_eth1);
+    }
     bool callback(PDU& pdu) {
 
-        EthernetII& eth = pdu.rfind_pdu<EthernetII>();     //Ethernet szintu protokollt keresunk a packetban
-        EthernetII* eth2 = eth.clone();                    //lemasoljuk az Ethernet szinttol felfele a packetet, igy szabadon modosithatjuk
 
-        //ha tartalmaz IP-t,  irjuk at es kuldjuk ki a masik oldalon
-        if ((eth2->find_pdu<IP>()) != 0 &&
-            (eth2->find_pdu<IP>().dst_addr() == "192.0.0.1" || (eth2->find_pdu<IP>().dst_addr() == "192.168.222.81" && eth2->find_pdu<IP>().src_addr() == "192.0.1.2"))
-            )
+        //eth /=IP("dest","source")
+        //RPI eth1 192.168.221.81
+        //random 192.0.3.4
+        //random 179.243.24.17
+        //exata eth3 192.168.221.3
+        //exata eth2 192.168.222.2
+        //szimulacioban levo 192.0.2.2
+        //szimulacioban levo 192.0.1.3
+        std::cout << "RPI 192.168.221.81 forrás küldése";
+        for (int i = 0; i < 15; i++) 
         {
-            eth2->src_addr("B8:27:EB:46:87:2A");
-            eth2->dst_addr("00:1F:29:60:0D:15");
-            eth2->find_pdu<IP>().src_addr("192.168.222.80");
-            eth2->find_pdu<IP>().dst_addr("192.0.0.1");
-            sender.send(*eth2, iface_eth0);                     //az eth0 interfacere kuldjuk
-            delete eth2;
-            return true;
+            BasicPacket("192.168.221.81");
+        }
+        std::cin.get();
+        std::cout << "random 192.0.3.4 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("192.0.3.4");
+        }
+        std::cin.get();
+        std::cout << "random 179.243.24.17 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("179.243.24.17");
+        }
+        std::cin.get();
+        std::cout << "exata eth3 192.168.221.3 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("192.168.221.3");
+        }
+        std::cin.get();
+        std::cout << "exata eth2 192.168.222.2 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("192.168.222.2");
+        }
+        std::cin.get();
+        std::cout << "szimulacioban levo 192.0.2.2 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("192.0.2.2");
+        }
+        std::cin.get();
+        std::cout << "szimulacioban levo 192.0.1.3 forrás küldése";
+        for (int i = 0; i < 15; i++)
+        {
+            BasicPacket("192.0.1.3");
         }
 
 
-        delete eth2;    //eth2-t sajat felelossegunk felszabaditani
+
         return true;    //a callback addig folytatodik amig true a visszateresi ertek
     }
 };
