@@ -67,11 +67,16 @@ private:
             BasicPacket("192.168.221.81");
         }
         std::cin.get();
-        /*
-        std::cout << "random 192.0.3.4 forrás küldése";
+        std::cout << " 192.0.2.2 forrás küldése";
         for (int i = 0; i < 3; i++)
         {
-            BasicPacket("192.0.3.4");
+            BasicPacket("192.0.2.2");
+        }
+        /*
+        std::cout << " 192.0.2.2 forrás küldése";
+        for (int i = 0; i < 3; i++)
+        {
+            BasicPacket("192.0.2.2");
         }
         std::cin.get();
         std::cout << "random 179.243.24.17 forrás küldése";
