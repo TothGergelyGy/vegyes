@@ -67,6 +67,7 @@ private:
             BasicPacket("192.168.221.81");
         }
         std::cin.get();
+        /*
         std::cout << "random 192.0.3.4 forrás küldése";
         for (int i = 0; i < 3; i++)
         {
@@ -103,7 +104,7 @@ private:
             BasicPacket("192.0.1.3");
         }
 
-
+        */
 
         return true;    //a callback addig folytatodik amig true a visszateresi ertek
     }
