@@ -55,7 +55,6 @@ if Json_Input:
     #ide json filebol beolvasni, a beolvasott ertekek alapjan fv-t hivni, majd kiirni
 else:
     print("Sys.argv[] beolvasas")
-    #ide sys.argv[]bol beolvasni a parancsot és fv-t hivni majd kiirni
     Server_ip=sys.argv[1]       #ip
     function_code=int(sys.argv[2])   #a function code a weboldalrol, onnan nezd ki
     timing=int(sys.argv[3])        #keres gyakorisaga 0.1 az 0.1 masodperc
