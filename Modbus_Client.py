@@ -62,7 +62,7 @@ else:
     function_type=sys.argv[4]   #const rand count
     start=int(sys.argv[5])           #register/coil kezdo addresse
     value=int(sys.argv[6])           #const ertek irasra / hany db-ot olvassin ki olvasasnal
-    c = ModbusClient(Server_ip)
+    c = ModbusClient(Server_ip,502)
     c.open()
     if function_type=="const":
         const_func(function_code,timing,start,value,c)
