@@ -92,7 +92,7 @@ print("single: egy uzenetet kuld egy cimre")#egy fix erteket egyszer elkuld, ujr
 print("counter: a megadott celig novekvo erteku uzeneteket kuld, csak egy registerre van ertelmezve")
 mode=input() 
 print("coil: coilt(1 db bit) fog atirni, igaz-hamis ertekekben")
-print("register: registert(16 bit) fog atirni 0tol 65 536ig")
+print("register: registert(16 bit) fog atirni 0tol 65536ig")
 target_type=input()
 
 
