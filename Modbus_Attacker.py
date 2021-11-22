@@ -56,7 +56,7 @@ def single_func(target_type,target_IP,target_Port):
             print("ertek: "+str(value)+" elkuldve "+str(address)+" cimre")
     elif target_type=="register":
         while True:
-            print("ertek, valid 0 es 65 536 kozott:")
+            print("ertek, valid 0 es 65536 kozott:")
             value=int(input())
             Target.open()
             Target.write_single_register(address,value)
