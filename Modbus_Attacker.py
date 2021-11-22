@@ -90,7 +90,7 @@ target_Port=int(sys.argv[2])
 print("continous: folyamatosan kuldi az uzeneteket egy celcimre")#ebbol van fix ertekes es random
 print("single: egy uzenetet kuld egy cimre")#egy fix erteket egyszer elkuld, ujra kerdezi mit kuldjon
 print("counter: a megadott celig novekvo erteku uzeneteket kuld, csak egy registerre van ertelmezve")
-mode=input() 
+mode=str(input()) 
 print("coil: coilt(1 db bit) fog atirni, igaz-hamis ertekekben")
 print("register: registert(16 bit) fog atirni 0tol 65536ig")
 target_type=input()
