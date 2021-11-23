@@ -55,7 +55,7 @@ elif mode=="h_register":
     write_from=int(input())
     write_until=write_from+(read_until-read_from)
     while True:
-        for x in range(read_from, read_until, 2):
+        for x in range(read_from, read_until):
             Slave1.open()
             y=Slave1.read_holding_registers(x,1) #az y egy lista
             Slave1.close()
@@ -78,7 +78,7 @@ elif mode=="i_register":#read only, holdingba kell irni
     write_from=int(input())
     write_until=write_from+(read_until-read_from)
     while True:
-        for x in range(read_from, read_until, 2):
+        for x in range(read_from, read_until):
             Slave1.open()
             y=Slave1.read_input_registers(x,1) #az y egy int lista
             Slave1.close()
@@ -122,7 +122,7 @@ elif mode=="all":#coil es holding register is
             Slave2.close()
             time.sleep(timing)  
         
-        for x in range(reg_read_from, reg_read_until, 2):
+        for x in range(reg_read_from, reg_read_until):
             Slave1.open()
             y=Slave1.read_holding_registers(x,1) #az y egy int lista
             Slave1.close()
