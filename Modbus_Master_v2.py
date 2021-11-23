@@ -26,7 +26,7 @@ while True:
             if i['action']=="read_and_write":
                 x=data['clients'][i['from']]['modbusclient'].read_coils(i['readaddress'],1)
                 print("read: "+i['type']+" from: "+i['from']+" address: "+str(i['readaddress'])+" value: "+str(x))
-                data['clients'][i['to']]['modbusclient'].write_multiple_coils(x,1)
+                data['clients'][i['to']]['modbusclient'].write_multiple_coils(x,1) itt (x,1) helyett (writeaddrees,x) kell
             elif i['action']=="read":
                 x=data['clients'][i['from']]['modbusclient'].read_coils(i['readaddress'],1)
                 print("read: "+i['type']+" from: "+i['from']+" address: "+str(i['readaddress'])+" value: "+str(x))
