@@ -15,6 +15,7 @@ print(data['clients'])
 print(type(data['clients']))
 
 for i in data['clients']:
+    print(i)
     i['modbusclient']=ModbusClient(i['ip'],i['port'])
     i['modbusclient'].open()
 
