@@ -1,0 +1,303 @@
+{
+	"clients":{
+		"Network": {
+			"ip" : 192.168.222.112,
+			"port" : 502
+		},
+		"Control": {
+			"ip" : 192.168.222.112,
+			"port" : 503
+		}
+	},
+	"commands":[
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 4,
+			"writeaddress" : 4
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 5,
+			"writeaddress" : 5
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 4,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 5,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 0,
+			"writeaddress" : 0
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 2,
+			"writeaddress" : 2
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 4,
+			"writeaddress" : 4
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 0,
+			"writeaddress" : 0
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 2,
+			"writeaddress" : 2
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 4,
+			"writeaddress" : 4
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 10,
+			"writeaddress" : 10
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 12,
+			"writeaddress" : 12
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 14,
+			"writeaddress" : 14
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 10,
+			"writeaddress" : 10
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 12,
+			"writeaddress" : 12
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 14,
+			"writeaddress" : 14
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 16,
+			"writeaddress" : 16
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 18,
+			"writeaddress" : 18
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 20,
+			"writeaddress" : 20
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 22,
+			"writeaddress" : 22
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 16,
+			"writeaddress" : 16
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 18,
+			"writeaddress" : 18
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 20,
+			"writeaddress" : 20
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
+			"readaddress" : 22,
+			"writeaddress" : 22
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 0,
+			"writeaddress" : 0
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 2,
+			"writeaddress" : 2
+		},
+		{
+			"type" : "coil",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 3,
+			"writeaddress" : 3
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Network",
+			"to" : "Network",
+			"readaddress" : 0,
+			"writeaddress" : 0
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Network",
+			"to" : "Network",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Network",
+			"to" : "Network",
+			"readaddress" : 2,
+			"writeaddress" : 2
+		},
+		{
+			"type" : "coil",
+			"action" : "read",
+			"from" : "Network",
+			"to" : "Network",
+			"readaddress" : 3,
+			"writeaddress" : 3
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 6,
+			"writeaddress" : 6
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 8,
+			"writeaddress" : 8
+		},
+	]
+}
