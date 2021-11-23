@@ -298,6 +298,6 @@
 			"to" : "Network",
 			"readaddress" : 8,
 			"writeaddress" : 8
-		},
+		}
 	]
 }
