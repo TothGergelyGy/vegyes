@@ -26,7 +26,7 @@ while True:
             if i['action']=="read_and_write":
                 x=data['clients'][i['from']]['modbusclient'].read_coils(i['readaddress'],1)
                 print("read: "+i['type']+" from: "+i['from']+" address: "+str(i['readaddress'])+" value: "+str(x))
-                data['clients'][i['to']]['modbusclient'].write_multiple_coils(data['clients'][i]['writeaddress'],x) #itt (x,1) helyett (writeaddrees,x) kell
+                data['clients'][i['to']]['modbusclient'].write_multiple_coils(i['writeaddress'],x) #itt (x,1) helyett (writeaddrees,x) kell
             elif i['action']=="read":
                 x=data['clients'][i['from']]['modbusclient'].read_coils(i['readaddress'],1)
                 print("read: "+i['type']+" from: "+i['from']+" address: "+str(i['readaddress'])+" value: "+str(x))
@@ -34,7 +34,7 @@ while True:
             if i['action']=="read_and_write":
                 x=data['clients'][i['from']]['modbusclient'].read_holding_registers(i['readaddress'],1)
                 print("read: "+i['type']+" from: "+i['from']+" address: "+str(i['readaddress'])+" value: "+str(x))
-                data['clients'][i['to']]['modbusclient'].write_multiple_registers(data['clients'][i]['writeaddress'],x)
+                data['clients'][i['to']]['modbusclient'].write_multiple_registers(i['writeaddress'],x)
                
             elif i['action']=="read":
                 x=data['clients'][i['from']]['modbusclient'].read_holding_registers(i['readaddress'],1)
