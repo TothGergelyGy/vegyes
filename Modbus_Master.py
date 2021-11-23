@@ -54,19 +54,22 @@ elif mode=="h_register":
     print("Iras kezdo bitje:")
     write_from=int(input())
     write_until=write_from+(read_until-read_from)
+    Slave1.open()
+    Slave2.open()
     while True:
         for x in range(read_from, read_until):
-            Slave1.open()
+            #Slave1.open()
             y=Slave1.read_holding_registers(x,1) #az y egy lista
-            Slave1.close()
+            #Slave1.close()
             print("holding register ertek "+str(x)+": "+str(y))
             if y==None:
                print("Nem tudott olvasni")
-            Slave2.open()
+            #Slave2.open()
             Slave2.write_multiple_registers((write_from+x-read_from),y)
-            Slave2.close()
-            time.sleep(timing)   
-          
+            #Slave2.close()
+            #time.sleep(timing)   
+    Slave1.close()
+    Slave2.close()
           
             
 elif mode=="i_register":#read only, holdingba kell irni
