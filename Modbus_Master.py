@@ -10,7 +10,7 @@ Slave2_IP=sys.argv[3]
 Slave2_Port=sys.argv[4]
 Slave1=ModbusClient(Slave1_IP,Slave1_Port)
 Slave2=ModbusClient(Slave2_IP,Slave2_Port)
-timing=0.5
+timing=0.1
 
 
 #Input register 	Read-only   16 bits
