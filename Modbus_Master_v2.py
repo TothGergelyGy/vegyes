@@ -10,7 +10,8 @@ timing=0.1
 
 commandfile=open(sys.argv[1])
 data=json.load(commandfile)
-
+print(data)
+print(data['clients'])
 
 for i in data['clients']:
     i['modbusclient']=ModbusClient(i['ip'],i['port'])
