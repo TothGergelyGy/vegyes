@@ -32,8 +32,7 @@ public:
 
     NetworkInterface iface_eth0 = NetworkInterface("eth0"); //"eth0" rpi interface
     NetworkInterface iface_eth1 = NetworkInterface("eth1"); //"eth1" rpi interface
-    NetworkInterface::Info info_eth0 = info_eth0.addresses(); //rpi interface cimeit kiolvassa
-    NetworkInterface::Info info_eth1 = info_eth1.addresses(); //rpi interface cimeit kiolvassa
+
     PacketSender sender;
 
     void run(Sniffer& sniffer) {                                                                               //libtins ilyen formaban koveteli meg a callbackfv meghivasat, folyamatos packet sniffing
@@ -48,13 +47,13 @@ private:
 
         //ha tartalmaz IP-t,  irjuk at es kuldjuk ki a masik oldalon
         if ((eth2->find_pdu<IP>()) != 0 &&
-            (eth2->find_pdu<IP>().dst_addr() == "192.168.222.172" )
+            (eth2->find_pdu<IP>()->dst_addr() == "192.168.222.172" )
             )
         {
             eth2->src_addr("B8:27:EB:46:87:2A");
             eth2->dst_addr("00:1F:29:60:0D:15");
-            eth2->find_pdu<IP>().src_addr("192.168.222.102");
-            eth2->find_pdu<IP>().dst_addr("192.168.222.172");
+            eth2->find_pdu<IP>()->src_addr("192.168.222.102");
+            eth2->find_pdu<IP>()->dst_addr("192.168.222.172");
             sender.send(*eth2, iface_eth0);                     //az eth0 interfacere kuldjuk
             delete eth2;
             return true;
