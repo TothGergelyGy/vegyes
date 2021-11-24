@@ -72,8 +72,24 @@
 			"action" : "read_and_write",
 			"from" : "Network",
 			"to" : "Control",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
 			"readaddress" : 2,
 			"writeaddress" : 2
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 3,
+			"writeaddress" : 3
 		},
 		{
 			"type" : "reg",
@@ -96,6 +112,14 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
+			"readaddress" : 1,
+			"writeaddress" : 1
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
 			"readaddress" : 2,
 			"writeaddress" : 2
 		},
@@ -104,8 +128,8 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
-			"readaddress" : 4,
-			"writeaddress" : 4
+			"readaddress" : 3,
+			"writeaddress" : 3
 		},
 		{
 			"type" : "reg",
@@ -120,8 +144,24 @@
 			"action" : "read_and_write",
 			"from" : "Network",
 			"to" : "Control",
+			"readaddress" : 11,
+			"writeaddress" : 11
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
 			"readaddress" : 12,
 			"writeaddress" : 12
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 13,
+			"writeaddress" : 13
 		},
 		{
 			"type" : "reg",
@@ -144,6 +184,14 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
+			"readaddress" : 11,
+			"writeaddress" : 11
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
 			"readaddress" : 12,
 			"writeaddress" : 12
 		},
@@ -152,8 +200,8 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
-			"readaddress" : 14,
-			"writeaddress" : 14
+			"readaddress" : 13,
+			"writeaddress" : 13
 		},
 		{
 			"type" : "reg",
@@ -168,6 +216,14 @@
 			"action" : "read_and_write",
 			"from" : "Network",
 			"to" : "Control",
+			"readaddress" : 17,
+			"writeaddress" : 17
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
 			"readaddress" : 18,
 			"writeaddress" : 18
 		},
@@ -176,8 +232,24 @@
 			"action" : "read_and_write",
 			"from" : "Network",
 			"to" : "Control",
+			"readaddress" : 19,
+			"writeaddress" : 19
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
 			"readaddress" : 20,
 			"writeaddress" : 20
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Network",
+			"to" : "Control",
+			"readaddress" : 21,
+			"writeaddress" : 21
 		},
 		{
 			"type" : "reg",
@@ -200,6 +272,14 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
+			"readaddress" : 17,
+			"writeaddress" : 17
+		},
+		{
+			"type" : "reg",
+			"action" : "read",
+			"from" : "Control",
+			"to" : "Control",
 			"readaddress" : 18,
 			"writeaddress" : 18
 		},
@@ -208,16 +288,16 @@
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
-			"readaddress" : 20,
-			"writeaddress" : 20
+			"readaddress" : 19,
+			"writeaddress" : 19
 		},
 		{
 			"type" : "reg",
 			"action" : "read",
 			"from" : "Control",
 			"to" : "Control",
-			"readaddress" : 22,
-			"writeaddress" : 22
+			"readaddress" : 20,
+			"writeaddress" : 20
 		},
 		{
 			"type" : "coil",
@@ -296,8 +376,24 @@
 			"action" : "read_and_write",
 			"from" : "Control",
 			"to" : "Network",
+			"readaddress" : 7,
+			"writeaddress" : 7
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
 			"readaddress" : 8,
 			"writeaddress" : 8
+		},
+		{
+			"type" : "reg",
+			"action" : "read_and_write",
+			"from" : "Control",
+			"to" : "Network",
+			"readaddress" : 9,
+			"writeaddress" : 9
 		}
 	]
 }
